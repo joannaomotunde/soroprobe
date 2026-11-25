@@ -163,7 +163,7 @@ func TestResolveBuildEdgeCases(t *testing.T) {
 			meta: map[string]string{
 				"source_repo": repoURL,
 				"commit_hash": "abc123",
-				"bldimg": pinnedImage,
+				"bldimg":      pinnedImage,
 			},
 			want: buildRequest{Source: repoURL, Rev: "abc123", Image: pinnedImage},
 		},
@@ -172,7 +172,7 @@ func TestResolveBuildEdgeCases(t *testing.T) {
 			meta: map[string]string{
 				"source_repo": "--upload-pack=evil",
 				"commit_hash": "abc123",
-				"bldimg": pinnedImage,
+				"bldimg":      pinnedImage,
 			},
 			wantError: "looks like an option",
 		},
